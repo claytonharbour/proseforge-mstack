@@ -1,0 +1,32 @@
+[
+  {
+    "index": 1,
+    "time_ms": 2000,
+    "text": "Welcome to this test video for the marketing stack.",
+    "audio_file": ""
+  },
+  {
+    "index": 2,
+    "time_ms": 8000,
+    "text": "This narration demonstrates the video pipeline.",
+    "audio_file": ""
+  },
+  {
+    "index": 3,
+    "time_ms": 15000,
+    "text": "Each segment has a timestamp and narration text.",
+    "audio_file": ""
+  },
+  {
+    "index": 4,
+    "time_ms": 22000,
+    "text": "The pipeline parses this markdown into JSON segments.",
+    "audio_file": ""
+  },
+  {
+    "index": 5,
+    "time_ms": 30000,
+    "text": "Thank you for watching this test.",
+    "audio_file": ""
+  }
+]

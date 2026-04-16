@@ -1,0 +1,63 @@
+version: 2
+
+before:
+  hooks:
+    - sh -c "cd src && go mod tidy"
+
+builds:
+  - id: mstack
+    dir: src
+    main: ./cmd/mstack
+    binary: mstack
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w
+      - -X main.version={{.Version}}
+
+  - id: mstack-mcp
+    dir: src
+    main: ./cmd/mstack-mcp
+    binary: mstack-mcp
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w
+      - -X main.version={{.Version}}
+
+archives:
+  - id: mstack
+    ids:
+      - mstack
+    formats:
+      - tar.gz
+    name_template: "mstack_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+  - id: mstack-mcp
+    ids:
+      - mstack-mcp
+    formats:
+      - tar.gz
+    name_template: "mstack-mcp_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+
+checksum:
+  name_template: "checksums.txt"
+
+changelog:
+  disable: true
+
+release:
+  github:
+    owner: claytonharbour
+    name: proseforge-mstack

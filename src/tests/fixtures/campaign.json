@@ -1,0 +1,22 @@
+{
+  "campaign": "test-campaign",
+  "posts": [
+    {
+      "id": "test-uuid-001",
+      "description": "Test post 1",
+      "status": "draft",
+      "twitter": "Test tweet content for post 1 #testing",
+      "facebook": "Test Facebook post content for post 1",
+      "instagram_caption": "Test Instagram caption #testing",
+      "instagram_image": "https://example.com/test-image.jpg"
+    },
+    {
+      "id": "test-uuid-002",
+      "description": "Test post 2",
+      "status": "posted",
+      "twitter": "Test tweet content for post 2",
+      "facebook": "Test Facebook post content for post 2",
+      "posted_at": "2026-01-14T12:00:00Z"
+    }
+  ]
+}
